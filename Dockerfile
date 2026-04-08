@@ -22,10 +22,6 @@ COPY . .
 # Cài dependency Laravel
 RUN composer install --no-dev --optimize-autoloader
 
-# Clear cache tránh lỗi
-RUN php artisan config:clear
-RUN php artisan cache:clear
-
 # Port Railway
 EXPOSE 8080
 
